@@ -1,0 +1,6 @@
+rlbot==1.*
+
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch
+
+numpy<2.0

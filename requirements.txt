@@ -1,0 +1,12 @@
+# setup_bot.py uses only the Python standard library — no pip dependencies needed.
+# The requirements below are for the GENERATED BOT folders (copied from assets/).
+
+# RLBot framework
+rlbot==1.*
+
+# PyTorch (CPU)
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch
+
+# NumPy (keep below 2.0 for torch compatibility)
+numpy<2.0
