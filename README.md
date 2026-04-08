@@ -34,7 +34,7 @@ The **generated bot** requires:
 
 ```
 rlbot==1.*
-torch          # CPU build
+torch          
 numpy<2.0
 ```
 
