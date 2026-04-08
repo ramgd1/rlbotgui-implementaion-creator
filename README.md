@@ -15,7 +15,7 @@ An interactive CLI tool that scaffolds RLBot (Rocket League) bot folders from pr
 | `agent.py` | Loads `SHARED_HEAD.LT` + `POLICY.LT` weights and exposes an `act()` method |
 | `bot.py` | Full `BaseAgent` subclass wired to the agent and obs builder |
 | `bot.cfg` | RLBot config pointing at `bot.py` |
-| `obs.py` | Observation builder (copied from assets) |
+| `obs.py` | Observation builder  |
 | `discrete_policy.py` | `DiscreteFF` policy network definition |
 | `your_act.py` | `LookupAction` action parser |
 | `util/` | Shared game-state utilities |
@@ -85,13 +85,4 @@ Output folder `my_bot/` is created next to `main.py`. Drop `SHARED_HEAD.LT` and 
     └── util/
 ```
 
----
 
-## Network architecture
-
-The generator wires up a `DiscreteFF` policy network with two sub-modules:
-
-- **shared_head** — loaded from `SHARED_HEAD.LT`
-- **policy** — loaded from `POLICY.LT`
-
-Both are loaded onto CPU with `torch.set_num_threads(1)` for deterministic single-threaded inference inside RLBot.
